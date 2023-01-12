@@ -111,23 +111,19 @@
 
 			if (/Android|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
     		.test(navigator.userAgent)) {
-    		alert("Вы используете мобильное устройство (телефон или планшет).")
+    		alert("Вы используете мобильное устройство (Скорее всего Android).")
 			} 
-
 			if (/iPhone|iPad|iPod/i
     		.test(navigator.userAgent)) {
     		alert("Вы используете устройство Apple (Телефон или планшет)")
-	
 			} 
 			
 			else alert("Вы используете ПК.")
 
 
+
 			const browserName = getBrowserName(navigator.userAgent);
 			console.log(`You are using: ${browserName}`);
-
-
-
 			document.addEventListener("DOMContentLoaded", function(event) {
 			document.getElementById("elementToModelOutput").innerHTML =  getURLParameter("brand") + " " + getURLParameter("model");
 			});
