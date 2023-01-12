@@ -7,34 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    
 </body>
 </html>
 <body>
-		
 		<p class="android_link">
 			<a id='123' href="sms:1315?body=500">Ссылка для Android</a>
 		</p>
-	
+		<a id='321' href="sms:3434&body=БФПомощь 500">
 		<p class="iphone_link">
-			<a id='321' href="sms:3434&body=БФПомощь 500">Ссылка для Iphone</a>
+			Ссылка для Iphone
 		</p>
+		</a>
 
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		
 		<script>
 			if (/Android|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
     		.test(navigator.userAgent)) {
-			alert("Вы используете мобильное устройство (Скорее всего Android).")
 			$(".iphone_link").hide();
 			$(".android_link").show();
 			} 
 			else if (/iPhone|iPad|iPod/i
     		.test(navigator.userAgent)) {
-    		alert("Вы используете устройство Apple (Телефон или планшет)")
 			$(".android_link").hide();
 			$(".iphone_link").show();
 			}
-			else alert("Вы используете ПК.")
 			</script>
 </body>
