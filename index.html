@@ -63,6 +63,8 @@
 		<div style='height: 40px; background-color: #e1e1e1;' id="elementToModelOutput"></div>
 
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
 		<script>
 			//позже удалить строку, она нерабочая
 			$( document ).ready(function() 
@@ -106,6 +108,20 @@
 				return "unknown";
 			}
 			}
+
+			if (/Android|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+    		.test(navigator.userAgent)) {
+    		alert("Вы используете мобильное устройство (телефон или планшет).")
+			} 
+
+			if (/iPhone|iPad|iPod/i
+    		.test(navigator.userAgent)) {
+    		alert("Вы используете устройство Apple (Телефон или планшет)")
+	
+			} 
+			
+			else alert("Вы используете ПК.")
+
 
 			const browserName = getBrowserName(navigator.userAgent);
 			console.log(`You are using: ${browserName}`);
