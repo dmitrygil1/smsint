@@ -12,11 +12,11 @@
 </html>
 <body>
 		
-		<p>
+		<p class="android_link">
 			<a href="sms:+15552345678?body=Hello%20World">Ссылка для Android</a>
 		</p>
 		
-		<p>
+		<p class="iphone_link">
 			<a href="sms:5552345678&body=Hello%20World">Ссылка для Iphone</a>
 		</p>
 
@@ -26,10 +26,14 @@
 			
 			if (/Android|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
     		.test(navigator.userAgent)) {
+				android_link.style.display = "none";
+				iphone_link.style.display = "block";
     		alert("Вы используете мобильное устройство (Скорее всего Android).")
 			} 
 			else if (/iPhone|iPad|iPod/i
     		.test(navigator.userAgent)) {
+				iphone_link.style.display = "none";
+				android_link.style.display = "block";
     		alert("Вы используете устройство Apple (Телефон или планшет)")
 			}
 			else alert("Вы используете ПК.")
