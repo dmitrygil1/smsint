@@ -59,6 +59,9 @@
 		<p>
 			<a href="sms:5552345678&body=Я%пьян%2%test">Финал0чка</a>
 		</p>
+
+		<div id="elementToModelOutput"></div>
+
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script>
 			//позже удалить строку, она нерабочая
@@ -108,6 +111,10 @@
 			const browserName = getBrowserName(navigator.userAgent);
 			console.log(`You are using: ${browserName}`);
 
+
+
+			document.addEventListener("DOMContentLoaded", function(event) {
+			document.getElementById("elementToModelOutput").innerHTML =  getURLParameter("brand") + " " + getURLParameter("model");
+			});
 			</script>
-	
 </body>
